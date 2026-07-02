@@ -1,6 +1,9 @@
 <!-- ============================================================
      HEADER - Premium Redesign
      ============================================================ -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <header class="header" id="navbar-spy">
     <!-- Top Bar -->
     <div class="top-bar">
@@ -37,7 +40,7 @@
     </div>
 
     <!-- Main Navbar -->
-    <nav class="navbar" id="primary-menu">
+  <nav class="navbar navbar-expand-lg" id="primary-menu">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="<?php echo base_url(); ?>">
@@ -85,6 +88,41 @@
      ============================================================ -->
 <style>
     /* ===== RESET & BASE ===== */
+    /* Desktop Fix */
+    @media (min-width: 992px) {
+
+    .navbar-collapse{
+        display:flex !important;
+        justify-content:flex-end;
+        flex-grow:1;
+    }
+
+    .navbar-nav{
+        display:flex !important;
+        flex-direction:row !important;
+        margin-left:auto;
+    }
+}
+    @media (min-width: 993px) {
+
+        .navbar-collapse {
+            display: flex !important;
+            flex-basis: auto !important;
+            justify-content: flex-end;
+        }
+
+        .navbar-nav {
+            display: flex !important;
+            flex-direction: row !important;
+            margin-left: auto;
+        }
+
+        .collapse {
+            display: flex !important;
+            visibility: visible !important;
+        }
+    }
+
     .header {
         background: #ffffff;
         position: relative;
@@ -522,25 +560,76 @@
             transition-duration: 0.01ms !important;
         }
     }
+    .navbar .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:nowrap;
+}
+
+.navbar-brand{
+    flex-shrink:0;
+}
+
+.navbar-collapse{
+    display:flex !important;
+    justify-content:flex-end;
+    flex-grow:1;
+}
+
+.navbar-nav{
+    display:flex !important;
+    flex-direction:row !important;
+    margin-left:auto;
+    gap:15px;
+}
+
+.nav-link{
+    white-space:nowrap;
+}.nav-link{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#2d3748 !important;
+    font-size:16px !important;
+    font-weight:600 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    white-space:nowrap;
+}
+
+.nav-link span{
+    display:inline-flex;
+    align-items:center;
+    font-size:20px;
+}
+
+.navbar-nav{
+    display:flex !important;
+    flex-direction:row !important;
+    gap:20px;
+}
 </style>
 
 <!-- ============================================================
      SCRIPT - Scroll Effect
      ============================================================ -->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const navbar = document.querySelector('.navbar');
 
         if (navbar) {
-            window.addEventListener('scroll', function () {
+            window.addEventListener('scroll', function() {
                 navbar.classList.toggle('scrolled', window.scrollY > 50);
-            }, { passive: true });
+            }, {
+                passive: true
+            });
         }
 
         // Mobile toggle icon animation
         const toggler = document.querySelector('.navbar-toggler');
         if (toggler) {
-            toggler.addEventListener('click', function () {
+            toggler.addEventListener('click', function() {
                 const expanded = this.getAttribute('aria-expanded') === 'true';
                 this.setAttribute('aria-expanded', !expanded);
             });
