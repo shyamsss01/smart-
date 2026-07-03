@@ -142,7 +142,19 @@ function prev_year(event) {
 }
 
 // Event handler for clicking the new event button
-function new_event(event) {
+	function new_event(event) {
+	var hospital = $("#hospital").val();
+
+if (!hospital || hospital.trim() === "") {
+
+    Swal.fire({
+        icon: "warning",
+        title: "Select Hospital",
+        text: "Please select hospital before booking appointment"
+    });
+
+    return false;
+}
     // if a date isn't selected then do nothing
     
     if($(".active-date").length===0)

@@ -1,0 +1,11 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2026-07-03 07:47:34 --> Severity: Notice --> Undefined variable: data C:\wamp64\www\smart-\application\controllers\MR.php 446
+ERROR - 2026-07-03 07:56:50 --> Severity: Notice --> Undefined variable: data C:\wamp64\www\smart-\application\controllers\MR.php 446
+ERROR - 2026-07-03 07:57:31 --> Query error: Duplicate entry '2026-07-03-1-2147483647' for key 'mr_mark_attendance.attendance_date' - Invalid query: INSERT INTO `mr_mark_attendance` (`attendance_date`, `attended`, `hospital_id`, `mobile`) VALUES ('2026-07-03', 'yes', '1', '07447226112')
+ERROR - 2026-07-03 10:06:54 --> Severity: error --> Exception: Too few arguments to function MR::fetch_hospital_id(), 0 passed in C:\wamp64\www\smart-\system\core\CodeIgniter.php on line 533 and exactly 1 expected C:\wamp64\www\smart-\application\controllers\MR.php 370
+ERROR - 2026-07-03 10:06:54 --> Severity: error --> Exception: Too few arguments to function MR::loadhospitaldetails(), 0 passed in C:\wamp64\www\smart-\system\core\CodeIgniter.php on line 533 and exactly 1 expected C:\wamp64\www\smart-\application\controllers\MR.php 452
+ERROR - 2026-07-03 10:08:00 --> Severity: error --> Exception: Too few arguments to function MR::loadhospitaldetails(), 0 passed in C:\wamp64\www\smart-\system\core\CodeIgniter.php on line 533 and exactly 1 expected C:\wamp64\www\smart-\application\controllers\MR.php 452
+ERROR - 2026-07-03 10:08:00 --> Severity: error --> Exception: Too few arguments to function MR::fetch_hospital_id(), 0 passed in C:\wamp64\www\smart-\system\core\CodeIgniter.php on line 533 and exactly 1 expected C:\wamp64\www\smart-\application\controllers\MR.php 370
+ERROR - 2026-07-03 11:02:15 --> Severity: error --> Exception: Too few arguments to function MR::loadhospitaldetails(), 0 passed in C:\wamp64\www\smart-\system\core\CodeIgniter.php on line 533 and exactly 1 expected C:\wamp64\www\smart-\application\controllers\MR.php 452
+ERROR - 2026-07-03 11:02:15 --> Severity: error --> Exception: Too few arguments to function MR::fetch_hospital_id(), 0 passed in C:\wamp64\www\smart-\system\core\CodeIgniter.php on line 533 and exactly 1 expected C:\wamp64\www\smart-\application\controllers\MR.php 370
